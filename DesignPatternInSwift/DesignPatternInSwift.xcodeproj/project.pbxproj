@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04D08C012546BFCE004C8C2A /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D08BFF2546BFCE004C8C2A /* EmployeeCell.swift */; };
+		04D08C022546BFCE004C8C2A /* EmployeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D08C002546BFCE004C8C2A /* EmployeeCell.xib */; };
+		04D08C082546C8A9004C8C2A /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 04D08C072546C8A9004C8C2A /* MBProgressHUD */; };
+		04D08C0B2546C9DD004C8C2A /* UILoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D08C0A2546C9DD004C8C2A /* UILoading.swift */; };
 		04E6579725467C79004B9944 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6579625467C79004B9944 /* AppDelegate.swift */; };
 		04E6579925467C79004B9944 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6579825467C79004B9944 /* SceneDelegate.swift */; };
 		04E6579B25467C79004B9944 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6579A25467C79004B9944 /* ViewController.swift */; };
@@ -14,9 +18,16 @@
 		04E657A025467C7A004B9944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E6579F25467C7A004B9944 /* Assets.xcassets */; };
 		04E657A325467C7A004B9944 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E657A125467C7A004B9944 /* LaunchScreen.storyboard */; };
 		04E657AC25467CFA004B9944 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 04E657AB25467CFA004B9944 /* README.md */; };
+		04FCC3E92546B59A006FA78F /* Employees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCC3E82546B59A006FA78F /* Employees.swift */; };
+		04FCC3EC2546B692006FA78F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCC3EB2546B692006FA78F /* APIService.swift */; };
+		04FCC3EF2546B7E1006FA78F /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCC3EE2546B7E1006FA78F /* EmployeeViewModel.swift */; };
+		04FCC3F32546BA98006FA78F /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCC3F22546BA98006FA78F /* GenericDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04D08BFF2546BFCE004C8C2A /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
+		04D08C002546BFCE004C8C2A /* EmployeeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeCell.xib; sourceTree = "<group>"; };
+		04D08C0A2546C9DD004C8C2A /* UILoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILoading.swift; sourceTree = "<group>"; };
 		04E6579325467C79004B9944 /* DesignPatternInSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignPatternInSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E6579625467C79004B9944 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04E6579825467C79004B9944 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +37,10 @@
 		04E657A225467C7A004B9944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04E657A425467C7A004B9944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04E657AB25467CFA004B9944 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		04FCC3E82546B59A006FA78F /* Employees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employees.swift; sourceTree = "<group>"; };
+		04FCC3EB2546B692006FA78F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		04FCC3EE2546B7E1006FA78F /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
+		04FCC3F22546BA98006FA78F /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,12 +48,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D08C082546C8A9004C8C2A /* MBProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04D08BFD2546BF9D004C8C2A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				04D08BFF2546BFCE004C8C2A /* EmployeeCell.swift */,
+				04D08C002546BFCE004C8C2A /* EmployeeCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		04D08BFE2546BFA8004C8C2A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				04D08BFD2546BF9D004C8C2A /* Cells */,
+				04FCC3E32546B532006FA78F /* Controllers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		04E6578A25467C78004B9944 = {
 			isa = PBXGroup;
 			children = (
@@ -58,16 +92,77 @@
 		04E6579525467C79004B9944 /* DesignPatternInSwift */ = {
 			isa = PBXGroup;
 			children = (
-				04E6579625467C79004B9944 /* AppDelegate.swift */,
-				04E6579825467C79004B9944 /* SceneDelegate.swift */,
-				04E6579A25467C79004B9944 /* ViewController.swift */,
-				04E6579C25467C79004B9944 /* Main.storyboard */,
+				04FCC3F12546BA60006FA78F /* Extensions */,
+				04FCC3E72546B55C006FA78F /* Storyboards */,
+				04FCC3E62546B54C006FA78F /* API Service */,
+				04FCC3E52546B547006FA78F /* Models */,
+				04FCC3E42546B53C006FA78F /* ViewModels */,
+				04D08BFE2546BFA8004C8C2A /* UI */,
+				04FCC3E22546B521006FA78F /* Common */,
 				04E6579F25467C7A004B9944 /* Assets.xcassets */,
-				04E657A125467C7A004B9944 /* LaunchScreen.storyboard */,
 				04E657A425467C7A004B9944 /* Info.plist */,
 				04E657AB25467CFA004B9944 /* README.md */,
 			);
 			path = DesignPatternInSwift;
+			sourceTree = "<group>";
+		};
+		04FCC3E22546B521006FA78F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				04E6579625467C79004B9944 /* AppDelegate.swift */,
+				04E6579825467C79004B9944 /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		04FCC3E32546B532006FA78F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04E6579A25467C79004B9944 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		04FCC3E42546B53C006FA78F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				04FCC3EE2546B7E1006FA78F /* EmployeeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		04FCC3E52546B547006FA78F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04FCC3E82546B59A006FA78F /* Employees.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04FCC3E62546B54C006FA78F /* API Service */ = {
+			isa = PBXGroup;
+			children = (
+				04FCC3EB2546B692006FA78F /* APIService.swift */,
+			);
+			path = "API Service";
+			sourceTree = "<group>";
+		};
+		04FCC3E72546B55C006FA78F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				04E6579C25467C79004B9944 /* Main.storyboard */,
+				04E657A125467C7A004B9944 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		04FCC3F12546BA60006FA78F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04FCC3F22546BA98006FA78F /* GenericDataSource.swift */,
+				04D08C0A2546C9DD004C8C2A /* UILoading.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +181,9 @@
 			dependencies = (
 			);
 			name = DesignPatternInSwift;
+			packageProductDependencies = (
+				04D08C072546C8A9004C8C2A /* MBProgressHUD */,
+			);
 			productName = DesignPatternInSwift;
 			productReference = 04E6579325467C79004B9944 /* DesignPatternInSwift.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +211,9 @@
 				Base,
 			);
 			mainGroup = 04E6578A25467C78004B9944;
+			packageReferences = (
+				04D08C062546C8A9004C8C2A /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+			);
 			productRefGroup = 04E6579425467C79004B9944 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -131,6 +232,7 @@
 				04E657A025467C7A004B9944 /* Assets.xcassets in Resources */,
 				04E657AC25467CFA004B9944 /* README.md in Resources */,
 				04E6579E25467C79004B9944 /* Main.storyboard in Resources */,
+				04D08C022546BFCE004C8C2A /* EmployeeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +244,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E6579B25467C79004B9944 /* ViewController.swift in Sources */,
+				04FCC3EC2546B692006FA78F /* APIService.swift in Sources */,
+				04FCC3E92546B59A006FA78F /* Employees.swift in Sources */,
 				04E6579725467C79004B9944 /* AppDelegate.swift in Sources */,
+				04D08C0B2546C9DD004C8C2A /* UILoading.swift in Sources */,
+				04FCC3F32546BA98006FA78F /* GenericDataSource.swift in Sources */,
+				04D08C012546BFCE004C8C2A /* EmployeeCell.swift in Sources */,
+				04FCC3EF2546B7E1006FA78F /* EmployeeViewModel.swift in Sources */,
 				04E6579925467C79004B9944 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +399,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K6265BR55C;
 				INFOPLIST_FILE = DesignPatternInSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,6 +418,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K6265BR55C;
 				INFOPLIST_FILE = DesignPatternInSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -343,6 +453,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04D08C062546C8A9004C8C2A /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jdg/MBProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04D08C072546C8A9004C8C2A /* MBProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04D08C062546C8A9004C8C2A /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
+			productName = MBProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04E6578B25467C78004B9944 /* Project object */;
 }
