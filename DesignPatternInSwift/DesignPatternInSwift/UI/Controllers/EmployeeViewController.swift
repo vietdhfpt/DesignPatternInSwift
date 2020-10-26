@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  EmployeeViewController.swift
 //  DesignPatternInSwift
 //
 //  Created by Gia Han on 10/26/20.
@@ -8,11 +8,11 @@
 import UIKit
 import MBProgressHUD
 
-class ViewController: UIViewController {
+class EmployeeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var viewModel: EmployeeViewModel!
+    private var presenter: EmployeePresenter!
     private var dataSource: GenericDataSource<EmployeeCell, EmployeeData>!
     private let cell = "EmployeeCell"
 
@@ -24,16 +24,28 @@ class ViewController: UIViewController {
         tableView.register(UINib(nibName: cell, bundle: nil), forCellReuseIdentifier: cell)
     }
 
-    private func viewModelUpdateUI() {
+    private func getEmployees() {
         UILoading.show(with: self.view)
-        viewModel = EmployeeViewModel()
-        viewModel.bindEmployeeViewModelToController = {
-            self.updateDataSource()
-        }
+        presenter.showEmployees()
     }
-    
-    private func updateDataSource() {
-        dataSource = GenericDataSource(cellIdentifier: cell, data: viewModel.employees.data, configureCell: { (cell, model) in
+}
+
+// MARK: - Life cycles
+extension EmployeeViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupDefaultTableView()
+        setupDefaultUI()
+        presenter = EmployeePresenter(view: self)
+        
+        getEmployees()
+    }
+}
+
+// MARK : - EmployeeViewProxy
+extension EmployeeViewController: EmployeeViewProxy {
+    func setEmployees(employees: [EmployeeData]) {
+        dataSource = GenericDataSource(cellIdentifier: cell, data: employees, configureCell: { (cell, model) in
             cell.titleLabel.text = model.employeeName
             cell.salaryLabel.text = String("$\(model.employeeSalary)")
         })
@@ -43,16 +55,6 @@ class ViewController: UIViewController {
             self.tableView.reloadData()
             UILoading.hide(with: self.view)
         }
-    }
-}
-
-// MARK: - Life cycles
-extension ViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupDefaultTableView()
-        setupDefaultUI()
-        viewModelUpdateUI()
     }
 }
 
