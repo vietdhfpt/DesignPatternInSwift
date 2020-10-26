@@ -26,8 +26,12 @@ class GenericDataSource<CellType: UITableViewCell, DataType>: NSObject, UITableV
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CellType else {
             fatalError("Can not dequeue cell with type: \(String(describing: CellType.self))")
         }
-        let item = self.data[indexPath.row]
-        self.configureCell?(cell, item)
+        
+        if indexPath.row < data.count {
+            let item = data[indexPath.row]
+            configureCell?(cell, item)
+        }
+        
         return cell
     }
 }

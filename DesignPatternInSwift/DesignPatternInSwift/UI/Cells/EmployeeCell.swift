@@ -25,7 +25,7 @@ class EmployeeCell: UITableViewCell {
     
     private func setupUI() {
         // Container view
-        containerView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.1)
+        containerView.backgroundColor = UIColor.black.withAlphaComponent(0.05)
         containerView.layer.cornerRadius = 8
         
         // Title label

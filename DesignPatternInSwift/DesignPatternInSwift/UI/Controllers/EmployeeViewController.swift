@@ -23,6 +23,13 @@ class EmployeeViewController: UIViewController {
     private func setupDefaultTableView() {
         tableView.register(UINib(nibName: cell, bundle: nil), forCellReuseIdentifier: cell)
     }
+    
+    private func setupPresenter() {
+        presenter = EmployeePresenter(view: self)
+        
+        // Get employee
+        getEmployees()
+    }
 
     private func getEmployees() {
         UILoading.show(with: self.view)
@@ -36,9 +43,7 @@ extension EmployeeViewController {
         super.viewDidLoad()
         setupDefaultTableView()
         setupDefaultUI()
-        presenter = EmployeePresenter(view: self)
-        
-        getEmployees()
+        setupPresenter()
     }
 }
 
